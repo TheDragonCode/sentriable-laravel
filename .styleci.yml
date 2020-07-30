@@ -58,7 +58,6 @@ enabled:
     - self_static_accessor
     - short_array_syntax
     - short_list_syntax
-    - short_scalar_cast
     - single_blank_line_before_namespace
     - single_line_class_definition
     - single_line_throw
