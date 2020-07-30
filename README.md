@@ -130,11 +130,11 @@ protected function handle()
 [badge_downloads]:      https://img.shields.io/packagist/dt/andrey-helldar/sentriable-laravel.svg?style=flat-square
 [badge_license]:        https://img.shields.io/packagist/l/andrey-helldar/sentriable-laravel.svg?style=flat-square
 [badge_stable]:         https://img.shields.io/github/v/release/andrey-helldar/sentriable-laravel?label=stable&style=flat-square
-[badge_styleci]:        https://styleci.io/repos/119022335/shield
+[badge_styleci]:        https://styleci.io/repos/283724960/shield
 [badge_unstable]:       https://img.shields.io/badge/unstable-dev--master-orange?style=flat-square
 
 [link_author]:          https://github.com/andrey-helldar
 [link_contributors]:    https://github.com/andrey-helldar/sentriable-laravel/graphs/contributors
 [link_license]:         LICENSE
 [link_packagist]:       https://packagist.org/packages/andrey-helldar/sentriable-laravel
-[link_styleci]:         https://github.styleci.io/repos/119022335
+[link_styleci]:         https://github.styleci.io/repos/283724960
