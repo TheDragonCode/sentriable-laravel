@@ -4,11 +4,12 @@ namespace Helldar\Sentry\Facades;
 
 use Helldar\Sentry\Supports\Sentry as Instance;
 use Illuminate\Support\Facades\Facade;
+use Throwable;
 
 /**
  * @method static bool isEnabled()
  * @method static void flush()
- * @method static void exception(\Throwable $e)
+ * @method static void exception(Throwable $e)
  */
 final class Sentry extends Facade
 {

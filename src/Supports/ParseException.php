@@ -6,6 +6,7 @@ use Helldar\Sentry\Traits\Makeable;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Arr;
 use Illuminate\Validation\ValidationException;
+use Throwable;
 
 final class ParseException
 {
@@ -17,7 +18,7 @@ final class ParseException
     /** @var \Throwable */
     protected $exception;
 
-    public function __construct(\Throwable $e)
+    public function __construct(Throwable $e)
     {
         $this->exception = $e;
     }
