@@ -127,6 +127,15 @@ If a tag is set on the current commit, it will be passed in the `release` field 
 
 It is better to do this once when deploying the application.
 
+You also need to uncomment the `release` key in the `config/sentry.php` file and specify the following value:
+```php
+return [
+    // ...
+    'release' => \Helldar\Sentry\Facades\Sha::get()
+    // ...
+];
+```
+
 
 ## Credits
 

@@ -2,7 +2,7 @@
 
 namespace Helldar\Sentry\Console;
 
-use Helldar\Sentry\Supports\Sha;
+use Helldar\Sentry\Facades\Sha;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
 

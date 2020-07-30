@@ -10,7 +10,7 @@ final class Sha
 
     public const FILENAME = 'version.json';
 
-    public static function path(): string
+    public function path(): string
     {
         return storage_path('app' . DIRECTORY_SEPARATOR . self::FILENAME);
     }
@@ -24,11 +24,11 @@ final class Sha
 
     protected function read(): string
     {
-        return file_get_contents(self::path());
+        return file_get_contents($this->path());
     }
 
     protected function fileExist(): bool
     {
-        return file_exists(self::path());
+        return file_exists($this->path());
     }
 }
