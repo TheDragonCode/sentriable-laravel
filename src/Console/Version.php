@@ -8,9 +8,9 @@ use Illuminate\Support\Arr;
 
 final class Version extends Command
 {
-    protected $signature = 'git:release';
+    protected $signature = 'git:version';
 
-    protected $description = 'Command description';
+    protected $description = 'Get the version of the current release';
 
     public function handle()
     {
