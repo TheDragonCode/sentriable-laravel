@@ -13,7 +13,7 @@ final class Sentry
 
     public function __construct()
     {
-        static::$instance = app('sentry');
+        self::$instance = app('sentry');
     }
 
     public function isEnabled(): bool
@@ -42,7 +42,7 @@ final class Sentry
     {
         $this->addBreadcrumb($e);
 
-        return static::$instance;
+        return self::$instance;
     }
 
     protected function dsn(): ?string
@@ -66,7 +66,7 @@ final class Sentry
 
     protected function addAdditionalBreadcrumb(string $category, string $message, array $data, int $status_code = 0): void
     {
-        static::$instance->addBreadcrumb(
+        self::$instance->addBreadcrumb(
             Breadcrumb::make($category, $message, $data, $status_code)->get()
         );
     }

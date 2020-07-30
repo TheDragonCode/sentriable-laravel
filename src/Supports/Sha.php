@@ -12,7 +12,7 @@ final class Sha
 
     public static function path(): string
     {
-        return storage_path('app' . DIRECTORY_SEPARATOR . static::FILENAME);
+        return storage_path('app' . DIRECTORY_SEPARATOR . self::FILENAME);
     }
 
     public function get(): ?string
@@ -24,11 +24,11 @@ final class Sha
 
     protected function read(): string
     {
-        return file_get_contents(static::path());
+        return file_get_contents(self::path());
     }
 
     protected function fileExist(): bool
     {
-        return file_exists(static::path());
+        return file_exists(self::path());
     }
 }
