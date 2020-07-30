@@ -129,9 +129,11 @@ It is better to do this once when deploying the application.
 
 You also need to uncomment the `release` key in the `config/sentry.php` file and specify the following value:
 ```php
+use Helldar\Sentry\Facades\Sha;
+
 return [
     // ...
-    'release' => \Helldar\Sentry\Facades\Sha::get()
+    'release' => Sha::get()
     // ...
 ];
 ```
