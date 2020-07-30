@@ -1,5 +1,7 @@
 preset: psr12
 
+risky: true
+
 enabled:
     - align_double_arrow
     - align_equals
@@ -14,6 +16,7 @@ enabled:
     - cast_spaces
     - combine_consecutive_issets
     - const_separation
+    - dir_constant
     - fully_qualified_strict_types
     - logical_operators
     - lowercase_cast
