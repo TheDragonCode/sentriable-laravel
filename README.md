@@ -119,6 +119,12 @@ protected function handle()
 }
 ```
 
+### Versioning
+
+To get the current version of the application, run the command `php artisan git:version`.
+
+If a tag is set on the current commit, it will be passed in the `release` field of the Sentry, otherwise the sha of the current commit will be taken.
+
 
 ## Credits
 
