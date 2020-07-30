@@ -63,7 +63,6 @@ enabled:
     - single_quote
     - space_after_semicolon
     - standardize_not_equals
-    - ternary_operator_spaces
     - ternary_to_null_coalescing
     - trailing_comma_in_multiline_array
     - trim_array_spaces
