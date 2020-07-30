@@ -19,7 +19,6 @@ enabled:
     - dir_constant
     - fully_qualified_strict_types
     - logical_operators
-    - lowercase_cast
     - lowercase_static_reference
     - method_separation
     - no_alias_functions
