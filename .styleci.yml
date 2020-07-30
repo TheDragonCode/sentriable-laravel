@@ -19,7 +19,6 @@ enabled:
     - dir_constant
     - fully_qualified_strict_types
     - logical_operators
-    - lowercase_static_reference
     - method_separation
     - no_alias_functions
     - no_blank_lines_after_phpdoc
