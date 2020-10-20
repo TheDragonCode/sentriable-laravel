@@ -11,11 +11,6 @@ final class Sentry
     /** @var \Sentry\State\Hub */
     protected static $instance;
 
-    public function __construct()
-    {
-        self::$instance = app('sentry');
-    }
-
     public function isEnabled(): bool
     {
         return app()->bound('sentry') && ! empty($this->dsn());
@@ -42,7 +37,7 @@ final class Sentry
     {
         $this->addBreadcrumb($e);
 
-        return self::$instance;
+        return $this->getInstance();
     }
 
     protected function dsn(): ?string
@@ -66,8 +61,17 @@ final class Sentry
 
     protected function addAdditionalBreadcrumb(string $category, string $message, array $data, int $status_code = 0): void
     {
-        self::$instance->addBreadcrumb(
+        $this->getInstance()->addBreadcrumb(
             Breadcrumb::make($category, $message, $data, $status_code)->get()
         );
+    }
+
+    protected function getInstance(): Hub
+    {
+        if (is_null(self::$instance)) {
+            self::$instance = app('sentry');
+        }
+
+        return self::$instance;
     }
 }
