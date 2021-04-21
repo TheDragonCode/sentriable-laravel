@@ -139,10 +139,16 @@ return [
 ```
 
 
-## Credits
+## License
 
-- [Andrey Helldar][link_author]
-- [![All contributors][badge_contributors]][link_contributors]
+This package is licensed under the [MIT License](LICENSE).
+
+
+## For Enterprise
+
+Available as part of the Tidelift Subscription.
+
+The maintainers of `andrey-helldar/sentriable-laravel` and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source packages you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact packages you use. [Learn more](https://tidelift.com/subscription/pkg/packagist-andrey-helldar-sentriable-laravel?utm_source=packagist-andrey-helldar-sentriable-laravel&utm_medium=referral&utm_campaign=enterprise&utm_term=repo).
 
 
 [badge_contributors]:   https://img.shields.io/github/contributors/andrey-helldar/sentriable-laravel?style=flat-square
