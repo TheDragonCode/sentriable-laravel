@@ -1,8 +1,6 @@
 # Sentriable Laravel
 
-[sentry/sentry-laravel](https://github.com/getsentry/sentry-laravel) package extension
-
-![cover](https://camo.githubusercontent.com/2dfeafbee0904d6df16ddf7200993dace1629e60/68747470733a2f2f73656e7472792d6272616e642e73746f726167652e676f6f676c65617069732e636f6d2f73656e7472792d6c6f676f2d626c61636b2e706e67)
+<img src="https://preview.dragon-code.pro/TheDragonCode/sentriable-laravel.svg?brand=laravel" width="100%" height="320" alt="Sentriable Laravel"/>
 
 
 [![StyleCI Status][badge_styleci]][link_styleci]
