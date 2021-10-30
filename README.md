@@ -1,6 +1,6 @@
 # Sentriable Laravel
 
-<img src="https://preview.dragon-code.pro/TheDragonCode/sentriable-laravel.svg?brand=laravel" alt="Sentriable Laravel"/>
+<img src="https://preview.dragon-code.pro/TheDragonCode/sentriable-laravel.svg?brand=sentry" alt="Sentriable Laravel"/>
 
 [![StyleCI Status][badge_styleci]][link_styleci]
 [![Stable Version][badge_stable]][link_packagist]
