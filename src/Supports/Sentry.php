@@ -1,6 +1,6 @@
 <?php
 
-namespace Helldar\Sentry\Supports;
+namespace DragonCode\Sentry\Supports;
 
 use Sentry\Laravel\Integration;
 use Sentry\State\Hub;
@@ -14,7 +14,7 @@ class Sentry
 
     public function isEnabled(): bool
     {
-        return app()->bound('sentry') && ! empty($this->dsn());
+        return app()->bound(HubInterface::class) && ! empty($this->dsn());
     }
 
     public function flush(): void

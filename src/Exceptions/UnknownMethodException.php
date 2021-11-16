@@ -1,13 +1,13 @@
 <?php
 
-namespace Helldar\Sentry\Exceptions;
+namespace DragonCode\Sentry\Exceptions;
 
-use Throwable;
+use Exception;
 
-class UnknownMethodException extends \Exception
+class UnknownMethodException extends Exception
 {
-    public function __construct($message = '', $code = 0, Throwable $previous = null)
+    public function __construct($message = '')
     {
-        parent::__construct($message, $code, $previous);
+        parent::__construct($message);
     }
 }

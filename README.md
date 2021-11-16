@@ -2,7 +2,6 @@
 
 <img src="https://preview.dragon-code.pro/TheDragonCode/sentriable-laravel.svg?brand=sentry" alt="Sentriable Laravel"/>
 
-[![StyleCI Status][badge_styleci]][link_styleci]
 [![Stable Version][badge_stable]][link_packagist]
 [![Unstable Version][badge_unstable]][link_packagist]
 [![Total Downloads][badge_downloads]][link_packagist]
@@ -14,7 +13,7 @@
 To get the latest version, simply require the project using [Composer](https://getcomposer.org):
 
 ```bash
-$ composer require andrey-helldar/sentriable-laravel
+$ composer require dragon-code/sentriable-laravel
 ```
 
 Or manually update `require` block of `composer.json` and run `composer update`.
@@ -22,15 +21,21 @@ Or manually update `require` block of `composer.json` and run `composer update`.
 ```json
 {
     "require": {
-        "andrey-helldar/sentriable-laravel": "^1.0"
+        "dragon-code/sentriable-laravel": "^2.0"
     }
 }
 ```
 
+### Upgrade from `andrey-helldar/sentriable-laravel`
 
-#### Lumen
+1. Replace `"andrey-helldar/sentriable-laravel": "^1.0"` with `"dragon-code/sentriable-laravel": "^2.0"` in the `composer.json` file;
+2. Replace `Helldar\Sentry` namespace prefix with `DragonCode\Sentry`;
+3. Call the `composer update` console command.
 
-This package is focused on Laravel development, but it can also be used in Lumen with some workarounds. Because Lumen works a little different, as it is like a barebone version of Laravel and the main configuration parameters are instead located in `bootstrap/app.php`, some alterations must be made.
+### Lumen
+
+This package is focused on Laravel development, but it can also be used in Lumen with some workarounds. Because Lumen works a little different, as it is like a barebone version of
+Laravel and the main configuration parameters are instead located in `bootstrap/app.php`, some alterations must be made.
 
 You can install Laravel Lang Publisher in `app/Providers/AppServiceProvider.php`, and uncommenting this line that registers the App Service Providers so it can properly load.
 
@@ -38,14 +43,12 @@ You can install Laravel Lang Publisher in `app/Providers/AppServiceProvider.php`
 // $app->register(App\Providers\AppServiceProvider::class);
 ```
 
-If you are not using that line, that is usually handy to manage gracefully multiple Lumen installations, you will have to add this line of code under the `Register Service Providers` section of your `bootstrap/app.php`.
+If you are not using that line, that is usually handy to manage gracefully multiple Lumen installations, you will have to add this line of code under
+the `Register Service Providers` section of your `bootstrap/app.php`.
 
 ```php
-if ($app->environment() !== 'production') {
-    $app->register(\Helldar\Sentry\ServiceProvider::class);
-}
+$app->register(\DragonCode\Sentry\ServiceProvider::class);
 ```
-
 
 ## How to use
 
@@ -54,9 +57,10 @@ Add Sentry reporting to `App/Exceptions/Handler.php`.
 ### For Laravel 7.x and later
 
 ```php
-use Helldar\Sentry\Traits\Sentriable;
+use DragonCode\Sentry\Traits\Sentriable;
+use Throwable;
 
-public function report(\Throwable $exception)
+public function report(Throwable $exception)
 {
     parent::report($exception);
 
@@ -69,9 +73,10 @@ public function report(\Throwable $exception)
 ### For Laravel 6.x
 
 ```php
-use Helldar\Sentry\Traits\Sentriable;
+use DragonCode\Sentry\Traits\Sentriable;
+use Exception;
 
-public function report(\Exception $exception)
+public function report(Exception $exception)
 {
     parent::report($exception);
 
@@ -86,21 +91,24 @@ For more information on configuring the Sentry package, see [here](https://docs.
 ### Using code elsewhere
 
 ```php
-use Helldar\Sentry\Traits\Sentriable;
+use DragonCode\Sentry\Traits\Sentriable
+use Throwable;
 
 protected function handle()
 {
     try {
         // some code
-    } catch (\Throwable $e) {
+    } catch (Throwable $e) {
         $this->sentryException($e);
     }
 }
 ```
 
 ### Use in loops with flushing
+
 ```php
-use Helldar\Sentry\Traits\Sentriable;
+use DragonCode\Sentry\Traits\Sentriable;
+use Throwable;
 
 protected function handle()
 {
@@ -109,7 +117,7 @@ protected function handle()
             $this->sentryFlush();
         
             // some code
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             $this->sentryException($e);
         }
     }
@@ -125,8 +133,9 @@ If a tag is set on the current commit, it will be passed in the `release` field 
 It is better to do this once when deploying the application.
 
 You also need to uncomment the `release` key in the `config/sentry.php` file and specify the following value:
+
 ```php
-use Helldar\Sentry\Facades\Sha;
+use DragonCode\Sentry\Facades\Sha;
 
 return [
     // ...
@@ -135,21 +144,19 @@ return [
 ];
 ```
 
-
 ## License
 
 This package is licensed under the [MIT License](LICENSE).
 
 
-[badge_contributors]:   https://img.shields.io/github/contributors/andrey-helldar/sentriable-laravel?style=flat-square
-[badge_downloads]:      https://img.shields.io/packagist/dt/andrey-helldar/sentriable-laravel.svg?style=flat-square
-[badge_license]:        https://img.shields.io/packagist/l/andrey-helldar/sentriable-laravel.svg?style=flat-square
-[badge_stable]:         https://img.shields.io/github/v/release/andrey-helldar/sentriable-laravel?label=stable&style=flat-square
-[badge_styleci]:        https://styleci.io/repos/283724960/shield
+[badge_downloads]:      https://img.shields.io/packagist/dt/dragon-code/sentriable-laravel.svg?style=flat-square
+
+[badge_license]:        https://img.shields.io/packagist/l/dragon-code/sentriable-laravel.svg?style=flat-square
+
+[badge_stable]:         https://img.shields.io/github/v/release/TheDragonCode/sentriable-laravel?label=stable&style=flat-square
+
 [badge_unstable]:       https://img.shields.io/badge/unstable-dev--master-orange?style=flat-square
 
-[link_author]:          https://github.com/andrey-helldar
-[link_contributors]:    https://github.com/andrey-helldar/sentriable-laravel/graphs/contributors
 [link_license]:         LICENSE
-[link_packagist]:       https://packagist.org/packages/andrey-helldar/sentriable-laravel
-[link_styleci]:         https://github.styleci.io/repos/283724960
+
+[link_packagist]:       https://packagist.org/packages/dragon-code/sentriable-laravel

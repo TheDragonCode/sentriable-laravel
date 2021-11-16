@@ -1,8 +1,8 @@
 <?php
 
-namespace Helldar\Sentry\Supports;
+namespace DragonCode\Sentry\Supports;
 
-use Helldar\Sentry\Traits\Makeable;
+use DragonCode\Sentry\Traits\Makeable;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Arr;
 use Illuminate\Validation\ValidationException;
