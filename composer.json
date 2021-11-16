@@ -1,5 +1,5 @@
 {
-    "name": "andrey-helldar/sentriable-laravel",
+    "name": "dragon-code/sentriable-laravel",
     "description": "sentry/sentry-laravel package extension",
     "type": "library",
     "license": "MIT",
@@ -11,8 +11,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/andrey-helldar/sentriable-laravel/issues",
-        "source": "https://github.com/andrey-helldar/sentriable-laravel"
+        "issues": "https://github.com/TheDragonCode/sentriable-laravel/issues",
+        "source": "https://github.com/TheDragonCode/sentriable-laravel"
     },
     "suggest": {
         "symfony/thanks": "Give thanks (in the form of a GitHub) to your fellow PHP package maintainers"
