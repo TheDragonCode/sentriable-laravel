@@ -1,11 +1,11 @@
 <?php
 
-namespace Helldar\Sentry\Supports;
+namespace DragonCode\Sentry\Supports;
 
-use Helldar\Sentry\Traits\Makeable;
+use DragonCode\Sentry\Traits\Makeable;
 use Sentry\Breadcrumb as Sentry;
 
-final class Breadcrumb
+class Breadcrumb
 {
     use Makeable;
 
@@ -32,7 +32,7 @@ final class Breadcrumb
         );
     }
 
-    public function toArray()
+    public function toArray(): array
     {
         return [
             'level'    => $this->getLevel(),

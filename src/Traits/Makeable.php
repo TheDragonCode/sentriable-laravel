@@ -1,6 +1,6 @@
 <?php
 
-namespace Helldar\Sentry\Traits;
+namespace DragonCode\Sentry\Traits;
 
 trait Makeable
 {

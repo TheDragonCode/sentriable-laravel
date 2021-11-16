@@ -1,19 +1,20 @@
 <?php
 
-namespace Helldar\Sentry\Supports;
+namespace DragonCode\Sentry\Supports;
 
 use Sentry\Laravel\Integration;
 use Sentry\State\Hub;
+use Sentry\State\HubInterface;
 use Throwable;
 
-final class Sentry
+class Sentry
 {
     /** @var \Sentry\State\Hub */
     protected static $instance;
 
     public function isEnabled(): bool
     {
-        return app()->bound('sentry') && ! empty($this->dsn());
+        return app()->bound(HubInterface::class) && ! empty($this->dsn());
     }
 
     public function flush(): void
@@ -69,7 +70,7 @@ final class Sentry
     protected function getInstance(): Hub
     {
         if (is_null(self::$instance)) {
-            self::$instance = app('sentry');
+            self::$instance = app(HubInterface::class);
         }
 
         return self::$instance;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Helldar\Sentry\Supports;
+namespace DragonCode\Sentry\Supports;
 
-use Helldar\Sentry\Traits\Makeable;
+use DragonCode\Sentry\Traits\Makeable;
 
-final class Sha
+class Sha
 {
     use Makeable;
 

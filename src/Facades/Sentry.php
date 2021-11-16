@@ -1,8 +1,8 @@
 <?php
 
-namespace Helldar\Sentry\Facades;
+namespace DragonCode\Sentry\Facades;
 
-use Helldar\Sentry\Supports\Sentry as Instance;
+use DragonCode\Sentry\Supports\Sentry as Instance;
 use Illuminate\Support\Facades\Facade;
 use Throwable;
 
@@ -11,9 +11,9 @@ use Throwable;
  * @method static void flush()
  * @method static void exception(Throwable $e)
  */
-final class Sentry extends Facade
+class Sentry extends Facade
 {
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return Instance::class;
     }

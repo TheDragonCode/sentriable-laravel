@@ -1,8 +1,8 @@
 <?php
 
-namespace Helldar\Sentry\Traits;
+namespace DragonCode\Sentry\Traits;
 
-use Helldar\Sentry\Facades\Sentry;
+use DragonCode\Sentry\Facades\Sentry;
 use Throwable;
 
 trait Sentriable

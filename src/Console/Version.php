@@ -1,12 +1,12 @@
 <?php
 
-namespace Helldar\Sentry\Console;
+namespace DragonCode\Sentry\Console;
 
-use Helldar\Sentry\Facades\Sha;
+use DragonCode\Sentry\Facades\Sha;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
 
-final class Version extends Command
+class Version extends Command
 {
     protected $signature = 'git:version';
 

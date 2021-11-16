@@ -1,16 +1,16 @@
 <?php
 
-namespace Helldar\Sentry\Facades;
+namespace DragonCode\Sentry\Facades;
 
-use Helldar\Sentry\Exceptions\UnknownMethodException;
-use Helldar\Sentry\Supports\Sha as Instance;
+use DragonCode\Sentry\Exceptions\UnknownMethodException;
+use DragonCode\Sentry\Supports\Sha as Instance;
 use Illuminate\Support\Facades\Facade;
 
 /**
  * @method static string path()
  * @method static string|null get()
  */
-final class Sha extends Facade
+class Sha extends Facade
 {
     protected static $instance;
 
@@ -18,7 +18,7 @@ final class Sha extends Facade
      * @param  string  $method
      * @param  array  $arguments
      *
-     * @throws \Helldar\Sentry\Exceptions\UnknownMethodException
+     * @throws \DragonCode\Sentry\Exceptions\UnknownMethodException
      *
      * @return mixed
      */

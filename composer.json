@@ -3,7 +3,7 @@
     "description": "sentry/sentry-laravel package extension",
     "type": "library",
     "license": "MIT",
-    "keywords": ["laravel", "log", "logging", "sentry", "error-handler", "error-monitoring", "crash-reporting", "crash-reports"],
+    "keywords": ["laravel", "log", "logging", "sentry", "error-handler", "error-monitoring", "crash-reporting", "crash-reports", "dragon-code", "dragon", "andrey-helldar"],
     "authors": [
         {
             "name": "Andrey Helldar",
@@ -19,19 +19,19 @@
     },
     "require": {
         "php": "^7.2.5|^8.0",
-        "illuminate/console": "^6.20.14|^7.30.4|^8.24",
-        "illuminate/contracts": "^6.20.14|^7.30.4|^8.24",
-        "illuminate/http": "^6.20.14|^7.30.4|^8.24",
-        "illuminate/support": "^6.20.14|^7.30.4|^8.24",
-        "illuminate/validation": "^6.20.14|^7.30.4|^8.24",
-        "sentry/sentry-laravel": "^2.0"
+        "illuminate/console": "^6.0|^7.0|^8.0",
+        "illuminate/contracts": "^6.0|^7.0|^8.0",
+        "illuminate/http": "^6.0|^7.0|^8.0",
+        "illuminate/support": "^6.0|^7.0|^8.0",
+        "illuminate/validation": "^6.0|^7.0|^8.0",
+        "sentry/sentry-laravel": "^2.10"
     },
     "require-dev": {
         "orchestra/testbench": "^4.0|^5.0|^6.0"
     },
     "autoload": {
         "psr-4": {
-            "Helldar\\Sentry\\": "src"
+            "DragonCode\\Sentry\\": "src"
         }
     },
     "config": {
@@ -43,7 +43,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Helldar\\Sentry\\ServiceProvider"
+                "DragonCode\\Sentry\\ServiceProvider"
             ]
         }
     }
