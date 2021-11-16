@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static string path()
  * @method static string|null get()
  */
-final class Sha extends Facade
+class Sha extends Facade
 {
     protected static $instance;
 

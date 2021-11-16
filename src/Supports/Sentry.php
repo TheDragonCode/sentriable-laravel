@@ -6,7 +6,7 @@ use Sentry\Laravel\Integration;
 use Sentry\State\Hub;
 use Throwable;
 
-final class Sentry
+class Sentry
 {
     /** @var \Sentry\State\Hub */
     protected static $instance;

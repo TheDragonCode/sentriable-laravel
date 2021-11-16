@@ -4,7 +4,7 @@ namespace Helldar\Sentry\Supports;
 
 use Helldar\Sentry\Traits\Makeable;
 
-final class Sha
+class Sha
 {
     use Makeable;
 

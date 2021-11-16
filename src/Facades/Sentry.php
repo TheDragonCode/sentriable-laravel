@@ -11,7 +11,7 @@ use Throwable;
  * @method static void flush()
  * @method static void exception(Throwable $e)
  */
-final class Sentry extends Facade
+class Sentry extends Facade
 {
     protected static function getFacadeAccessor()
     {

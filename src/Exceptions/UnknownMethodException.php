@@ -4,7 +4,7 @@ namespace Helldar\Sentry\Exceptions;
 
 use Throwable;
 
-final class UnknownMethodException extends \Exception
+class UnknownMethodException extends \Exception
 {
     public function __construct($message = '', $code = 0, Throwable $previous = null)
     {

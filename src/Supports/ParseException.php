@@ -8,7 +8,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Validation\ValidationException;
 use Throwable;
 
-final class ParseException
+class ParseException
 {
     use Makeable;
 

@@ -5,7 +5,7 @@ namespace Helldar\Sentry\Supports;
 use Helldar\Sentry\Traits\Makeable;
 use Sentry\Breadcrumb as Sentry;
 
-final class Breadcrumb
+class Breadcrumb
 {
     use Makeable;
 
