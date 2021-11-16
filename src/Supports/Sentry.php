@@ -4,6 +4,7 @@ namespace Helldar\Sentry\Supports;
 
 use Sentry\Laravel\Integration;
 use Sentry\State\Hub;
+use Sentry\State\HubInterface;
 use Throwable;
 
 class Sentry
@@ -69,7 +70,7 @@ class Sentry
     protected function getInstance(): Hub
     {
         if (is_null(self::$instance)) {
-            self::$instance = app('sentry');
+            self::$instance = app(HubInterface::class);
         }
 
         return self::$instance;
