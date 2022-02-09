@@ -15,7 +15,7 @@ class ParseException
     /** @var string[] */
     protected $allow = [ValidationException::class, RequestException::class];
 
-    /** @var \Throwable */
+    /** @var Throwable */
     protected $exception;
 
     public function __construct(Throwable $e)

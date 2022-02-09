@@ -49,8 +49,10 @@ class Breadcrumb
         switch (true) {
             case ! $code || $code >= 500:
                 return Sentry::LEVEL_ERROR;
+
             case $code >= 400:
                 return Sentry::LEVEL_WARNING;
+
             default:
                 return Sentry::LEVEL_INFO;
         }

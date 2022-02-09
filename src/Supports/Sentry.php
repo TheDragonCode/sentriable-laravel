@@ -23,7 +23,7 @@ class Sentry
     }
 
     /**
-     * @param  \Throwable  $e
+     * @param Throwable $e
      */
     public function exception(Throwable $e): void
     {

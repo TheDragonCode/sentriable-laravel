@@ -15,8 +15,8 @@ class Sha extends Facade
     protected static $instance;
 
     /**
-     * @param  string  $method
-     * @param  array  $arguments
+     * @param string $method
+     * @param array $arguments
      *
      * @throws \DragonCode\Sentry\Exceptions\UnknownMethodException
      *
