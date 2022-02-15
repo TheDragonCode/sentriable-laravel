@@ -1,9 +1,21 @@
 {
     "name": "dragon-code/sentriable-laravel",
     "description": "sentry/sentry-laravel package extension",
-    "type": "library",
     "license": "MIT",
-    "keywords": ["laravel", "log", "logging", "sentry", "error-handler", "error-monitoring", "crash-reporting", "crash-reports", "dragon-code", "dragon", "andrey-helldar"],
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "log",
+        "logging",
+        "sentry",
+        "error-handler",
+        "error-monitoring",
+        "crash-reporting",
+        "crash-reports",
+        "dragon-code",
+        "dragon",
+        "andrey-helldar"
+    ],
     "authors": [
         {
             "name": "Andrey Helldar",
@@ -14,24 +26,26 @@
         "issues": "https://github.com/TheDragonCode/sentriable-laravel/issues",
         "source": "https://github.com/TheDragonCode/sentriable-laravel"
     },
-    "suggest": {
-        "symfony/thanks": "Give thanks (in the form of a GitHub) to your fellow PHP package maintainers"
-    },
     "require": {
-        "php": "^7.2.5|^8.0",
-        "illuminate/console": "^6.0|^7.0|^8.0|^9.0",
-        "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0",
-        "illuminate/http": "^6.0|^7.0|^8.0|^9.0",
-        "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
-        "illuminate/validation": "^6.0|^7.0|^8.0|^9.0",
+        "php": "^7.2.5 || ^8.0",
+        "illuminate/console": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "illuminate/contracts": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "illuminate/http": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "illuminate/validation": "^6.0 || ^7.0 || ^8.0 || ^9.0",
         "sentry/sentry-laravel": "^2.10"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0"
+        "orchestra/testbench": "^4.0 || ^5.0 || ^6.0 || ^7.0"
     },
     "conflict": {
         "andrey-helldar/sentriable-laravel": "*"
     },
+    "suggest": {
+        "symfony/thanks": "Give thanks (in the form of a GitHub) to your fellow PHP package maintainers"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "DragonCode\\Sentry\\": "src"
@@ -41,8 +55,6 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
     "extra": {
         "laravel": {
             "providers": [
